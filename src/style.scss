@@ -1,0 +1,456 @@
+// Base
+//
+
+.dropdown-item,
+.page-link,
+.nav {
+  outline: 0;
+}
+
+// Page transition
+//
+
+.router-transitions {
+  opacity: 1;
+  transition: opacity .2s;
+
+  body.app-loading & {
+    opacity: .75;
+  }
+}
+
+// Tables
+//
+
+table.b-table > thead > tr > th.sorting,
+table.b-table > tfoot > tr > th.sorting {
+  padding-right: 2rem;
+}
+
+[dir=rtl] .b-table > thead > tr > th.sorting,
+[dir=rtl] .b-table > tfoot > tr > th.sorting {
+  padding-left: 2rem;
+
+  &:before {
+    right: auto;
+    left: .75em;
+  }
+
+  &:after {
+    right: auto;
+    left: .25em;
+  }
+}
+
+table.b-table > thead {
+  > tr > th:focus {
+    outline: 0;
+    text-decoration: underline;
+  }
+
+  > tr > th.sorting::before,
+  > tr > th.sorting::after {
+    bottom: auto !important;
+    padding-bottom: 0 !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.default-style[dir=rtl] .b-table {
+  @import "~@/vendor/styles/_appwork/include";
+
+  > thead > tr > th.sorting,
+  > tfoot > tr > th.sorting {
+    padding-right: $table-cell-padding;
+  }
+
+  &.card-table > thead > tr > th.sorting:first-child,
+  &.card-table > tfoot > tr > th.sorting:first-child {
+    padding-right: $card-spacer-x;
+  }
+}
+
+.material-style[dir=rtl] .b-table {
+  @import "~@/vendor/styles/_appwork/include-material";
+
+  > thead > tr > th.sorting,
+  > tfoot > tr > th.sorting {
+    padding-right: $table-cell-padding;
+  }
+
+  &.card-table > thead > tr > th.sorting:first-child,
+  &.card-table > tfoot > tr > th.sorting:first-child {
+    padding-right: $card-spacer-x;
+  }
+}
+
+// Cards
+//
+
+.default-style {
+  @import "~@/vendor/styles/_appwork/include";
+
+  .card-img-left {
+    @include border-left-radius(if($border-radius != 0px, calc(#{$border-radius} - 1px), 0));
+  }
+
+  .card-img-right {
+    @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+  }
+
+  &[dir=rtl] {
+    .card-img-left {
+      @include border-left-radius(0);
+      @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+    }
+
+    .card-img-right {
+      @include border-right-radius(0);
+      @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+    }
+  }
+}
+
+.material-style {
+  @import "~@/vendor/styles/_appwork/include-material";
+
+  .card-img-left {
+    @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+  }
+
+  .card-img-right {
+    @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+  }
+
+  &[dir=rtl] {
+    .card-img-left {
+      @include border-left-radius(0);
+      @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+    }
+
+    .card-img-right {
+      @include border-right-radius(0);
+      @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));
+    }
+  }
+}
+
+// Dropdowns
+.default-style {
+  @import "~@/vendor/styles/_appwork/include";
+
+  .b-dropdown-form,
+  .b-dropdown-text {
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  }
+}
+
+.material-style {
+  @import "~@/vendor/styles/_appwork/include-material";
+
+  .b-dropdown-form,
+  .b-dropdown-text {
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  }
+}
+//Pullman App
+
+
+._122px{
+  font-size:12.2px !important;
+}
+._215px{
+  font-size:21.5px !important;
+}
+._16px{
+  font-size:16px !important;
+}
+._153px{
+  font-size:15.3px !important;
+}
+._133px{
+  font-size:13.3px !important;
+}
+._143px{
+  font-size:14.3px !important;
+}
+
+._mb-9px{
+  margin-bottom:9px !important;
+}
+._mt-9px{
+  margin-top:9px !important;
+}
+._ml-9px{
+  margin-left:9px !important;
+}
+._mr-9px{
+  margin-right:9px !important;
+}
+._my-9px{
+  margin-bottom:9px !important;
+  margin-top:9px !important;
+}
+._mx-9px{
+  margin-left:9px !important;
+  margin-right:9px !important;
+}
+._m-9px{
+  margin:9px 9px !important;
+}
+._mb-10px{
+  margin-bottom:10px !important;
+}
+._mt-10px{
+  margin-top:10px !important;
+}
+._ml-10px{
+  margin-left:10px !important;
+}
+._mr-10px{
+  margin-right:10px !important;
+}
+._my-10px{
+  margin-bottom:10px !important;
+  margin-top:10px !important;
+}
+._mx-10px{
+  margin-left:10px !important;
+  margin-right:10px !important;
+}
+
+
+
+._pb-9px{
+  padding-bottom:9px !important;
+}
+._pt-9px{
+  padding-top:9px !important;
+}
+._pl-9px{
+  padding-left:9px !important;
+}
+._pr-9px{
+  padding-right:9px !important;
+}
+._py-9px{
+  padding-bottom:9px !important;
+  padding-top:9px !important;
+}
+._px-9px{
+  padding-left:9px !important;
+  padding-right:9px !important;
+}
+._p-9px{
+  padding:9px 9px !important;
+}
+
+._pl-10px{
+  padding-left:10px !important;
+}
+._pr-10px{
+  padding-right:10px !important;
+}
+._pt-10px{
+  padding-top:10px !important;
+}
+._pb-10px{
+  padding-bottom:10px !important;
+}
+._px-10px{
+  padding-left:10px !important;
+  padding-right:10px !important;
+}
+._py-10px{
+  padding-top:10px !important;
+  padding-bottom:10px !important;
+}
+._p-10px{
+  padding:10px 10px !important;
+}
+
+
+._mb-20px{
+  margin-bottom:20px !important;
+}
+._ml-20px{
+  margin-left:20px !important;
+}
+._mr-20px{
+  margin-right:20px !important;
+}
+._mt-20px{
+  margin-top:20px !important;
+}
+._mb-20px{
+  margin-bottom:20px !important;
+}
+._mx-20px{
+  margin-left:20px !important;
+  margin-right:20px !important;
+}
+._my-20px{
+  margin-bottom:20px !important;
+  margin-top:20px !important;
+}
+._m-20px{
+  margin:20px 20px !important;
+}
+
+._pl-20px{
+  padding-left:20px !important;
+}
+._pr-20px{
+  padding-right:20px !important;
+}
+._pt-20px{
+  padding-top:20px !important;
+}
+._pb-20px{
+  padding-bottom:20px !important;
+}
+._px-20px{
+  padding-left:20px !important;
+  padding-right:20px !important;
+}
+._py-20px{
+  padding-top:20px !important;
+  padding-bottom:20px !important;
+}
+._p-20px{
+  padding:20px 20px !important;
+}
+._w-150px{
+  width:150px !important;
+}
+._font-weight-500{
+  font-weight:500 !important;
+}
+
+.card .card-header-title{
+  font-weight:bold !important;
+  font-size:16px !important;
+  color:#2f3237;
+}
+.default-border{
+  border-radius: 3px !important;
+  border-color: rgba(24, 28, 33, 0.1) !important;
+  border-width:1px;
+  border-style:solid;
+}
+.card .badge.default{
+  height:24px !important;
+  border-radius: 2px !important;
+  text-align:center;
+  line-height:18px;
+}
+.card .badge.big{
+   height:32px !important;
+   font-size:1rem !important;
+   line-height:24px;
+   border-radius: 2px !important;
+}
+.badge-success{
+  background-color: #d9f5ea !important;
+  color:#4E5155 !important;
+}
+.badge-warning{
+  background-color: #fff9e4 !important;
+  color:#4E5155 !important;
+}
+.badge-default{
+  bacgkground-color:#e0e0e1 !important;
+  color:#4E5155 !important;
+}
+.badge-secondary{
+  background-color: rgba(24, 28, 33, 0.1) !important;
+  color:#4E5155 !important;
+}
+.badge.invited{
+    background-color: #def6f9 !important;
+}
+.badge.applied{
+    background-color: #edeff2 !important;
+}
+.badge.rejected{
+    background-color: #f9e5e4 !important;
+}
+.badge.short{
+    background-color: #eff8fc !important;
+}
+.badge.interviewed{
+    background-color: #e0e8fd !important;
+}
+.badge.hired{
+    background-color: #d9f5ea !important;
+}
+.text-info{
+  color:#3068f4 !important;
+}
+.text-success{
+  color:#02bc77 !important;
+}
+.pullman-morrison-auth-logo {
+  width: 129px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.87;
+  letter-spacing: 1.32px;
+  text-align: center;
+  color: #f2ce17;
+}
+
+i:hover {
+    cursor: pointer;
+}
+.na{
+  color:#cccccc !important;
+  font-weight:normal !important;
+}
+.na:before{
+  content: "N/A";
+}
+
+.vl{
+  position:absolute;
+  right:18px;
+  height:calc(100% + 30px);
+  z-index:0;
+}
+.vl-pill{
+  z-index:1;
+  background-color:white;
+}
+.vl.start{
+  height:calc(70%);
+  top:55%;
+}
+
+.vl.end{
+  height:calc(70%);
+  bottom:55%;
+}
+.vl.none{
+  display:none
+}
+.search-reset-link{
+  color:#4E5155 !important;
+  font-size:12.2px;
+  line-height:0px;
+}
+
+.dropdown-toggle.btn-warning{
+  background:#fff9e4 !important;
+}
+
+
+.page-item.active .page-link, .page-item.active .page-link:hover, .page-item.active .page-link:focus, .pagination li.active > a:not(.page-link), .pagination li.active > a:not(.page-link):hover, .pagination li.active > a:not(.page-link):focus {
+    border-color: #FFD950;
+    background-color: #FFD950;
+    color: #fff;
+}
